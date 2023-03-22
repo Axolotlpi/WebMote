@@ -1,5 +1,6 @@
 import Grid from '../components/Grid';
 import JsonEditor from '../components/JsonEditor';
+import ActionEditor from '../components/ActionEditor';
 import { Link } from 'react-router-dom';
 import { generateNewAction, writeActionsToStore, deleteActionsFromStore} from '../helpers/Actions';
 
@@ -24,7 +25,7 @@ function Editor({actions, setActions}) {
             <Grid>
                 {
                     actions && actions.map(action => 
-                        (<JsonEditor key={action.id} object={action} setObject={updateAction} deleteObject={deleteAction} />))
+                        (<ActionEditor key={action.id} object={action} setObject={updateAction} deleteObject={deleteAction} />))
                 }
             </Grid>
             <div className="row">

@@ -20,25 +20,32 @@ let nameRef = React.createRef();
         <form onSubmit={saveSelf}>
           <div className="row">
             <div className="input-field col s12">
-              <label htmlFor="name">{"Name, URL, and Icon:"}</label>
+              <label class="active" htmlFor="name">{"Name"}</label>
               <textarea
                 id="name"
                 ref={nameRef}
                 defaultValue={object.name}
                 className="materialize-textarea"
               ></textarea>
+            </div>
+            <div className="input-field col s12">
+              <label class="active" htmlFor="url">{"URL"}</label>
               <textarea
                 id="url"
                 ref={urlRef}
                 defaultValue={object.templateLink}
                 className="materialize-textarea"
               ></textarea>
+              </div>
+            <div className="input-field col s12">
+              <label class="active" htmlFor="icon">{"Icon"}</label>
               <textarea
                 id="icon"
                 ref={iconRef}
                 defaultValue={object.icon}
                 className="materialize-textarea"
               ></textarea>
+             
             </div>
           </div>
           <button className="btn waves-effect" type="submit">

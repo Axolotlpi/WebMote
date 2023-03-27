@@ -12,7 +12,8 @@ let templateAction = {
             key: 'name',
             value: 'google'
         }
-    ]
+    ],
+    ordering: 999
 }
 
 navigator.storage && navigator.storage.persist && navigator.storage.persist();

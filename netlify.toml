@@ -1,9 +1,9 @@
 [build]
-	command  = “npm run build”
-	functions =  “netlify/functions”
-	publish = “build”
-	//for spas
-	[[redirects]]
-		from = “/*”
-		to = “/index.html”
-		status = 200
+	command  = "vite build"
+	functions =  "netlify/functions"
+	publish = "dist"
+# for spas
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200
